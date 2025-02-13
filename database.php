@@ -29,6 +29,7 @@
             unset($_SESSION['email']);
             unset($_SESSION['password']);
             header('location: tela_login.php');
+            print_r($result);
         }else{
             $_SESSION['email']=$email;
             $_SESSION['password']=$password;
@@ -36,6 +37,7 @@
         }
     }else{
         header('Location: tela_login.php');
+        print_r($result);
     }
 
 ?>
