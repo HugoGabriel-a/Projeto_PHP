@@ -45,7 +45,7 @@
             </a>
         </div>
     </nav>
-    </div>
+</div>
 <div class="box">
         <form action="cadastroAluno.php" method="POST">
             <fieldset>
@@ -85,4 +85,11 @@
         </form>
     </div>
 </body>
+<script>
+    <?php
+    if($result_create){
+        echo "alert(\"aluno cadastrado com sucesso\")";
+    }
+    ?>
+</script>
 </html>

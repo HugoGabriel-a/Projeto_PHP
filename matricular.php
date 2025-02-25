@@ -26,6 +26,7 @@
     )";
 
     $resultcursos = $conexao->prepare($sqlcursos);
+    $resultcursos->execute();
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +39,16 @@
     <link rel="stylesheet" href="style_aluno.css">
 </head>
 <body>
+<div>
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Gerenciador de Matriculas</a>
+        <div class="d-flex">
+            <a href="aluno.php">
+                <button>lista de alunos</button>
+            </a>
+        </div>
+    </nav>
+</div>
     <h1>lista de cursos que <?php echo $nome?> pode fazer</h1>
     <div>
         <table class="tabela text-white" border="1">
@@ -49,7 +60,6 @@
             </thead>
             <tbody>
                 <?php
-                    $resultcursos->execute();
                     while($curso=$resultcursos->fetch(PDO::FETCH_ASSOC)){
                         echo "<tr>";
                             echo "<td>".$curso['nome']."</td>";

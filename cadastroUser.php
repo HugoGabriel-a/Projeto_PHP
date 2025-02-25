@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="box">
-        <form action="cadastroUser.php" method="POST">
+        <form action="cadastroUser.php" method="POST" id="form">
             <fieldset>
                 <legend><b>Cadastro de Usuarios</b></legend>
                 <br>
@@ -42,4 +42,11 @@
         </a>
     </div>
 </body>
+<script>
+    <?php
+    if($result){
+        echo "alert(\"usuario cadastrado com sucesso\")";
+    }
+    ?>
+</script>
 </html>
